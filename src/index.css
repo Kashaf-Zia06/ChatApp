@@ -5,6 +5,8 @@
     font-family: Outfit;
 
 }
-.hide-scrollbar::-webkit-scrollbar {
+
+.hide-scrollbar::-webkit-scrollbar
+{
   display: none;
 }
