@@ -3,6 +3,7 @@ import "dotenv/config";
 import cors from "cors";
 import http from "http";
 import connectDB from "./lib/db.js";
+import userRouter from "./routes/userRoutes.js";
 
 
 
@@ -16,6 +17,7 @@ app.use('/api/status',(req,res)=>
     res.send("Server  is alive")
 )
 
+app.use('/api/auth',userRouter)
 await connectDB()
 
 const PORT=process.env.PORT || 5000;
